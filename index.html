@@ -3,12 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora Área</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>bleq banking</title>
 </head>
 <body>
-    <h1 style="text-align: center;">O CONTEUDO ESTÁ NO CONSOLE</h1>
-    
 
-    <script src="javascript/javascript.js"></script>
+<div class="container">
+    <h1>BLEQ Bank</h1>
+    <h2>Depósitos</h2>
+
+    <div class="form-ajuste">
+        <form id="form-deposito">
+            <input type="text" id="nome-beneficiario" required placeholder="Nome completo do beneficiário">
+            <p id="error-message">
+            </p>
+            
+            <input type="number" id="numero-conta" required placeholder="Número da conta">
+            <input type="number" id="valor-deposito" required placeholder="Valor">
+            <textarea id="descricao" placeholder="Descrição(Opcional)"></textarea>
+            <button id="btn-depositar" type="submit">Depositar</button>
+
+        </form>
+        <p id="success-message">
+        </p>
+    </div>
+</div>
+
+    <script src="javascript/main.js"></script>
 </body>
 </html>
