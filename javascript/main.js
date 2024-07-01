@@ -27,7 +27,7 @@ function validarCampo() {
     }
     else{
         const containerMensagemNeutra = document.querySelector('#message-error');
-        containerMensagemError.innerHTML = mensagemErro;
-        containerMensagemError.style.display = 'block';
+        containerMensagemNeutra.innerHTML = mensagemErro;
+        containerMensagemNeutra.style.display = 'block';
     }
 }
