@@ -1,33 +1,57 @@
-const form = document.getElementById('form-comparacao');
+// function calculaArea(base, altura) { 
 
-const n1 = document.getElementById('number1').value;
-const n2 = document.getElementById('number2').value;
+//     let bse = prompt("Qual valor da base?")
+//     let alt = prompt("Qual valor da altura?")
 
-const mensagemSucesso = `O 2º Número que é o ${n2} é maior que o 1º Número ${n1} e isso fez a ação ser um sucesso  ` 
-const mensagemErro = 'Algo deu errado na transação, verifique se o 2º número é maior que o 1º número.'
-const mensagemNeutra = `Os 2 números tem o mesmo valor`
+//     base = bse
+//     altura = alt
+    
+//     resultado = base * altura
+
+//     return alert (`O calculo da sua base x altura da o resultado de área: ${resultado} ` )
+
+
+//     // a função tem que ser executada
+// }
+
+const form = document.getElementById('form-deposito');
+
+function validaNome(nomeCompleto) {
+    const nomeComoArray = nomeCompleto.split(' ');
+    return nomeComoArray.length >= 3;
+}
+
+const nomeBeneficiario = document.getElementById('nome-beneficiario');
 
 form.addEventListener('submit', function(e){
+    let formEValido = false;
     e.preventDefault();
-})
+    
+    const numeroConta = document.getElementById('numero-conta')
+    const valorDeposito = document.getElementById('valor-deposito')
+    const descricao = document.getElementById('descricao')
+    const mensagemSucesso = `A quantidade de: <b>${valorDeposito.value}</b> depositado para o cliente: <b>${nomeBeneficiario.value}</b>- conta: <b>${numeroConta.value}</b> e a sua mensagem de <b>${descricao.value}</b> foi entregue  ` 
+    const mensagemErro = 'Algo deu errado na transação, verifique o nome.'
 
-function validarCampo() {
-    const campoA = n1
-    const campoB = n2
-
-    if (campoB > campoA){
+    formEValido = validaNome(nomeBeneficiario.value)
+    if (formEValido){
         const containerMensagemSucesso = document.querySelector('#success-message');
         containerMensagemSucesso.innerHTML = mensagemSucesso;
         containerMensagemSucesso.style.display = 'block';
+
+        nomeBeneficiario.value = ' '; 
+        numeroConta.value = ' '; 
+        valorDeposito.value = ' '; 
+        descricao.value = ' '; 
     }
-    else if(campoA > campoB){
+    else{
+        nomeBeneficiario.style.border = '1px solid red';
         const containerMensagemError = document.querySelector('#error-message');
         containerMensagemError.innerHTML = mensagemErro;
         containerMensagemError.style.display = 'block';
     }
-    else{
-        const containerMensagemNeutra = document.querySelector('#error-message');
-        containerMensagemNeutra.innerHTML = mensagemErro;
-        containerMensagemNeutra.style.display = 'block';
-    }
-}
+})
+
+// nomeBeneficiario.addEventListener('change', function(e)){
+//     console.log(e)
+// }
