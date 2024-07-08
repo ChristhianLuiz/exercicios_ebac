@@ -1,32 +1,37 @@
 const form = document.getElementById('form-comparacao');
-
-const n1 = document.getElementById('number1').value;
-const n2 = document.getElementById('number2').value;
-
-const mensagemSucesso = `O 2º Número que é o ${n2} é maior que o 1º Número ${n1} e isso fez a ação ser um sucesso  ` 
-const mensagemErro = 'Algo deu errado na transação, verifique se o 2º número é maior que o 1º número.'
-const mensagemNeutra = `Os 2 números tem o mesmo valor`
+const n1 = document.getElementById('number1');
+const n2 = document.getElementById('number2');
 
 form.addEventListener('submit', function(e){
-    e.preventDefault();    
-    
-    const campoA = n1
-    const campoB = n2
+    e.preventDefault();   
 
-    if (campoB > campoA){
-        const containerMensagemSucesso = document.querySelector('#success-message');
+    const mensagemSucesso = `O número ${n2.value} é maior que o número ${n1.value} e isso fez a ação ser um sucesso` 
+    const mensagemErro = 'Algo deu errado na comparação, verifique se o 2º número é maior que o 1º número.'
+    const mensagemNeutra = `Os 2 números tem o mesmo valor`
+    const mensagemFalha = `Houve alguma falha na interação. não conseguimos operar!`
+
+    const campoA = n1.value
+    const campoB = n2.value
+
+    if (campoA < campoB){
+        const containerMensagemSucesso = document.querySelector('#message');
         containerMensagemSucesso.innerHTML = mensagemSucesso;
         containerMensagemSucesso.style.display = 'block';
     }
     else if(campoA > campoB){
-        const containerMensagemError = document.querySelector('#error-message');
-        containerMensagemError.innerHTML = mensagemErro;
-        containerMensagemError.style.display = 'block';
+        const containerMensagemErro = document.querySelector('#message');
+        containerMensagemErro.innerHTML = mensagemErro;
+        containerMensagemErro.style.display = 'block';
+    }
+    else if(campoA == campoB){
+        const containerMensagemNeutra = document.querySelector('#message');
+        containerMensagemNeutra.innerHTML = mensagemNeutra;
+        containerMensagemNeutra.style.display = 'block';
     }
     else{
-        const containerMensagemNeutra = document.querySelector('#error-message');
-        containerMensagemNeutra.innerHTML = mensagemErro;
-        containerMensagemNeutra.style.display = 'block';
+        const containerMensagemFalha = document.querySelector('#message');
+        containerMensagemFalha.innerHTML = mensagemFalha;
+        containerMensagemFalha.style.display = 'block';
     }
 })  
 
