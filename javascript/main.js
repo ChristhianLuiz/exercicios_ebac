@@ -34,7 +34,3 @@ form.addEventListener('submit', function(e){
         containerMensagemFalha.style.display = 'block';
     }
 })  
-
-// function validarCampo() {
-
-
