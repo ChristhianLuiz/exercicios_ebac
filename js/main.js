@@ -8,7 +8,22 @@ $(document).ready(function(){
     })
 
     $('form').on('submit', function(e){
-        console.log("Enviado")
         e.preventDefault();
+
+        const enderecoNovaImg = $(`#endereco-img-nova`).val();
+
+        const novoItem = $('<li style="display:none">    </li>');
+        $(`<img src="${enderecoNovaImg}" />`).appendTo(novoItem);
+
+        $(`
+            <div class="overlay-img-link">
+                <a href="${enderecoNovaImg}" target="_blank" title="Ver imagem em tamanho real" />
+                Ver imagem em tamanho real
+            </div>
+            `).appendTo(novoItem);
+            $(novoItem).appendTo('ul');
+            $(novoItem).fadeIn(2000);
+
+            $('#endereco-img-nova').val(' ');
     })
 })
