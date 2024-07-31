@@ -6,7 +6,7 @@
 }
 
 header{
-    background-color: #5f27cd;
+    background-color: #0b1da8;
     color: #ffffff;
     padding: 16px 0;
     display: flex;
@@ -23,7 +23,7 @@ form{
     background-color: #658fbc;
     padding: 24px 0;
     text-align: center;
-    display: none;
+    /* display: none; */
 }
 
 form h2{
@@ -48,18 +48,27 @@ button{
     cursor: pointer;
 }
 
+.lista{
+    width: 100%;
+}
+
 ul {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    
 }
 
 ul li {
+    max-height: 280px;
     max-width: 25%;
     list-style-type: none;
-    position: relative;
-    max-height: 280px;
-    overflow-y: hidden;
     margin: 20px 10px;
+    background-color: #822008;
+    color: white;
+}
+
+.click{
+    color: white;
+    text-decoration: line-through;
 }
