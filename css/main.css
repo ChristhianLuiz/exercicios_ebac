@@ -3,16 +3,35 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+body{
+    background-color: rgb(179, 179, 167);
 }
 
 header{
-    background-color: #0b1da8;
+    background-color: #152180;
     color: #ffffff;
-    padding: 16px 0;
+    padding: 14px 0;
     display: flex;
-    border-bottom: 16px solid #341f97;
+    border-bottom: 14px solid #323d8c8f;
     justify-content: center;
     font-style: italic;
+}
+
+h1{
+    font-size: 28px;
+}
+
+h2{
+    font-size: 16px;
+    color: white;
+    font-style: italic;
+}
+
+h3{
+    margin-top: 8px;
 }
 
 header button{
@@ -20,10 +39,9 @@ header button{
 }
 
 form{
-    background-color: #658fbc;
+    background-color: #152180;
     padding: 24px 0;
     text-align: center;
-    /* display: none; */
 }
 
 form h2{
@@ -56,19 +74,22 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
 
 ul li {
     max-height: 280px;
-    max-width: 25%;
-    list-style-type: none;
-    margin: 20px 10px;
-    background-color: #822008;
-    color: white;
+    max-width: 100%;
+    margin: 10px 10px;
+    list-style-type:none;
+
 }
 
-.click{
-    color: white;
+.tarefa{
+    border-radius: 10px;
+    background-color: rgb(214, 214, 180);
+    padding: 8px;
+}
+
+.complete{
     text-decoration: line-through;
 }

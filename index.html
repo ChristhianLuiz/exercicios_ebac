@@ -11,25 +11,25 @@
 </head>
 
 <body>
+    <div class="container">
+        <header>
+            <h1>Lista de Tarefas</h1>
+        </header>
 
-    <header>
-        <h1>Lista de Tarefas</h1>
-    </header>
+        <form id="lista-tarefa">
+            <h2>Insira uma nova tarefa</h2>
+            <input type="text" id="nome-tarefa" placeholder="Informe o nome da tarefa">
+            <button type="submit">Adicionar +</button>
+        </form>
 
-    <form id="lista-tarefa">
-        <h2>Insira uma nova tarefa</h2>
-        <input type="text" id="nome-tarefa" placeholder="Informe o nome da tarefa">
-        <button type="submit">Adicionar +</button>
-    </form>
+        <div class="lista">
+            <ul> <h3>Tarefas a fazer:</h3>
+                <!-- <li class="tarefa"></li> -->
+            </ul>
+        </div>
 
-    <div class="lista">
-        <ul id="click">
-
-        </ul>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="./js/main.js"></script>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="./js/main.js"></script>
- 
 </body>
 </html>

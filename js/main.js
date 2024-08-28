@@ -1,19 +1,15 @@
 $(document).ready(function(){
     $('form').on('submit', function(e){
         e.preventDefault();
-
         const nomeNovaTarefa = $(`#nome-tarefa`).val();
-        const novoItem = $('<li>    </li>');
-        $(`<li> ${nomeNovaTarefa} </li>`).appendTo(novoItem);
+        const novoItem = $('<li></li>');
 
-        $(``).appendTo(novoItem);
+        $(`<li class="tarefa"> ${nomeNovaTarefa} </li>`).appendTo(novoItem);
         $(novoItem).appendTo('ul');
-        console.log(novoItem);
+        // $(``).appendTo(novoItem);
     })
 
-    $('ul').on('click', function(){
-        // $(`<li class="click"> </li>`);
-        // $(`li`).css('text-decoration').indexOf('line-through')
-        // $('li').addClass("click")
+    $('ul').on('click', 'li', function(){
+        $(this).toggleClass("complete")
     })
 }) 
