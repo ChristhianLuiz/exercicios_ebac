@@ -7,7 +7,7 @@
 }
 
 body{
-    background-color: rgb(179, 179, 167);
+    background-color: rgb(170, 170, 170);
 }
 
 header{
@@ -81,12 +81,11 @@ ul li {
     max-width: 100%;
     margin: 10px 10px;
     list-style-type:none;
-
 }
 
 .tarefa{
-    border-radius: 10px;
-    background-color: rgb(214, 214, 180);
+    border-radius: 6px;
+    background-color: rgb(239, 239, 221);
     padding: 8px;
 }
 

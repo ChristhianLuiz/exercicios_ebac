@@ -6,7 +6,6 @@ $(document).ready(function(){
 
         $(`<li class="tarefa"> ${nomeNovaTarefa} </li>`).appendTo(novoItem);
         $(novoItem).appendTo('ul');
-        // $(``).appendTo(novoItem);
     })
 
     $('ul').on('click', 'li', function(){
